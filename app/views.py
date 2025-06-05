@@ -21,7 +21,7 @@ def save(request):
 #ngrok
 @api_view(['GET'])
 def fetch(request):
-    students = Student.objects.create(name ="Joel Katana", email="joe@gmail.com", password="122345", gender="male", sport="soccer", education="college")
+    # students = Student.objects.create(name ="Joel Katana", email="joe@gmail.com", password="122345", gender="male", sport="soccer", education="college")
     students = Student.objects.all()
     serializer = StudentSerializer(students, many=True)
     return Response(serializer.data)
